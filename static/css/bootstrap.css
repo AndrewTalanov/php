@@ -1,0 +1,41 @@
+body, html, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+p, h1, h2, h3 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+.catalog {
+  width: 55%;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  gap: 20px;
+}
+.catalog-item {
+  background-color: rgb(117, 117, 246);
+}
+.catalog-title {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+}
+.catalog-func {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 10px 0;
+}
+.catalog-func-item {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+@media (max-width: 460px) {
+  .catalog {
+    width: 90%;
+    justify-content: center;
+  }
+}
