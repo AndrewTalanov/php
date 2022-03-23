@@ -1,6 +1,13 @@
 <?php
   require_once('bootstrap.php');
   $links = Layout::getInstance();
+
+  // Если для страницы понадобится другая статика, то можно передать название нужной папки в метод
+  // $links->setCss('css_test');
+
+  // Если такой папки нет, то подключится статика по умолчанию
+  // $links->setCss('css_testt');
+
 ?>
 
 <!DOCTYPE html>

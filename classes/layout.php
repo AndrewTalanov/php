@@ -51,9 +51,13 @@
     private $cssInHtmlTag = "";
     private $jsInHtmlTag = "";
 
-    private function setCSS() {
+    public function setCSS($dir = 0) {
 
-      $dir = $this->folders["css"];
+      if ($dir == 0 || !is_dir("static/$dir")) {
+        $dir = $this->folders["css"];
+      } else {
+        $dir = 'static/' . $dir;
+      }
       $uniq = array_unique($this->getAllFiles($dir));
 
       foreach ($uniq as $file) {  
@@ -62,9 +66,13 @@
         }
       }
     }
-    private function setJS() {
-
-      $dir = $this->folders["js"];
+    public function setJS($dir = 0) {
+       
+      if ($dir == 0 || !is_dir("static/$dir")) {
+        $dir = $this->folders["js"];
+      } else {
+        $dir = 'static/' . $dir;
+      }
       $uniq = array_unique($this->getAllFiles($dir));
 
       foreach ($uniq as $file) {  
