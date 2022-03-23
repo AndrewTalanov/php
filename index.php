@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php
-    $links->getFont("Roboto", 100, 200, 500, 700);
+    $links->getFont("Red Hat Mono", 400);
     $links->getCSS();
   ?>
   <title>Document</title>
