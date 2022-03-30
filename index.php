@@ -2,12 +2,7 @@
   require_once('bootstrap.php');
   $links = Layout::getInstance();
 
-  // Если для страницы понадобится другая статика, то можно передать название нужной папки в метод
   // $links->setCss('css_test');
-
-  // Если такой папки нет, то подключится статика по умолчанию
-  // $links->setCss('css_testt');
-
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php
-    $links->getFont("Red Hat Mono", 400);
+    $links->setFont();
     $links->getCSS();
   ?>
   <title>Document</title>
@@ -27,7 +22,7 @@
   <section class="catalog">
     <?php
       require_once('catalog/index.php');
-    ?>
+    ?>    
   </section>
 
   <?php

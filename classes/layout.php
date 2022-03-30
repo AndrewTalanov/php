@@ -96,7 +96,10 @@
     }
 
     // подключение шрифтов
-    public function getFont($name, ...$weight) {
+    public function setFont() {
+
+      $font = Config::getFont('layout.php', 'font');
+      ["name" => $name, "weight" => $weight] = $font;
 
       $nameNoSpace = str_replace(" ", "+", $name);
       $weight = implode(";", $weight);
