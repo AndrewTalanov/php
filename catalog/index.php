@@ -13,20 +13,21 @@
     [
       'title' => 'Tovar 4', 
     ],
+    [
+      'title' => 'Tovar 5', 
+    ],
   ];
-
-  foreach($data as $item) {
-
-    $title = $item['title'];
-    
-    echo "
-      <div class='catalog-item'>
-        <h2 class='catalog-title'>$title</h2>
-        <div class='catalog-func'>
-          <a href='#' class='catalog-func-buy catalog-func-item'>В корзину</a>
-          <a href='#' class='catalog-func-favor catalog-func-item'>В избранное</a>
-        </div>
-      </div>
-    ";
-  }
 ?>
+
+<?php foreach($data as $item):
+  $title = $item['title']; ?>
+
+  <div class='catalog-item'>
+    <h2 class='catalog-title'><?= $title ?></h2>
+    <div class='catalog-func'>
+      <a href='#' class='catalog-func-buy catalog-func-item'>В корзину</a>
+      <a href='#' class='catalog-func-favor catalog-func-item'>В избранное</a>
+    </div>
+  </div>
+  
+<?php endforeach; ?>

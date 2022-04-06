@@ -1,7 +1,7 @@
 <?php
   require_once('bootstrap.php');
   $links = Layout::getInstance();
-
+  $db = DB::getInstance();
   // $links->setCss('css_test');
 ?>
 
@@ -19,6 +19,9 @@
 </head>
 <body>
 
+  <?php
+    $db->create_table('Test');
+  ?>
   <section class="catalog">
     <?php
       require_once('catalog/index.php');
